@@ -29,7 +29,7 @@ jobs:
         ECR_REPOSITORY: python-test
         IMAGE_TAG: latest
       run: |
-        docker-compose up
+        docker-compose build
         docker push build_fastapi_1
         docker push build_redis-server_1
 
