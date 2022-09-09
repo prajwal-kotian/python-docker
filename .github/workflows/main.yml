@@ -29,8 +29,9 @@ jobs:
         ECR_REPOSITORY: python-test
         IMAGE_TAG: latest
       run: |
-        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        docker-compose up
+        docker push build_fastapi_1
+        docker push build_redis-server_1
 
     - name: Generate Deployment Package 
       run: zip -r deploy.zip * 
