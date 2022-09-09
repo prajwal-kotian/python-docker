@@ -3,16 +3,16 @@ services:
   redis-server:
     image: redis
   fastapi:
-    build: 
-      context: .
-      dockerfile: Dockerfile
-    volumes:
-      - .:/application
+    build: .
+      # context: .
+      # dockerfile: Dockerfile
+    # volumes:
+    #   - .:/application
     ports:
      - "8000:8000"
-  test:
-    build: 
-      context: .
-      dockerfile: Dockerfile.dev
-    volumes:
-      - .:/application
+  # test:
+  #   build: 
+  #     context: .
+  #     dockerfile: Dockerfile.dev
+  #   volumes:
+  #     - .:/application
