@@ -30,8 +30,7 @@ jobs:
         IMAGE_TAG: latest
       run: |
         docker-compose build
-        docker push build_fastapi_1
-        docker push build_redis-server_1
+        docker ps
 
     - name: Generate Deployment Package 
       run: zip -r deploy.zip * 
