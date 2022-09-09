@@ -11,4 +11,4 @@ COPY ./ ./
 
 
 
-CMD ["python", "./application/main.py"]
+CMD ["python", "./application/application.py"]
