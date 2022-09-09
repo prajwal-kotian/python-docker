@@ -36,11 +36,11 @@ jobs:
       run: zip -r deploy.zip * 
     
     - name: Get timestamp
-      uses: gerred/actions/current-time@master
+      uses: gerred/actions/current-time@main
       id: current-time
         
     - name: Run string replace
-      uses: frabert/replace-string-action@master
+      uses: frabert/replace-string-action@main
       id: format-time
       with:
         pattern: '[:\.]+'
