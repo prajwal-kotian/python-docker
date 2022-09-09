@@ -48,4 +48,15 @@ jobs:
         replace-with: '-'
         flags: 'g'
 
+    - name: Deploy to EB
+      uses: einaregilsson/beanstalk-deploy@v14
+      with:
+        aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        application_name: Test-app
+        environment_name: Testapp-env
+        version_label: "docker-deployment-${{ steps.format-time.outputs.replaced }}"
+        region: us-east-1
+        deployment_package: deploy.zip
+
 
