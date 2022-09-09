@@ -53,8 +53,8 @@ jobs:
       with:
         aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        application_name: Docker-python
-        environment_name: Dockerpython-env
+        application_name: Docker-test-1
+        environment_name: Dockertest1-env
         version_label: "docker-deployment-${{ steps.format-time.outputs.replaced }}"
         region: us-east-1
         deployment_package: deploy.zip
