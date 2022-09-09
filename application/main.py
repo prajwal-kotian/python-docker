@@ -9,7 +9,7 @@ import redis
 app = FastAPI()
 
 r = redis.Redis(
-    host='redis-server',
+    host='35.175.216.6',
     port=6379
     #password='password'
     )
